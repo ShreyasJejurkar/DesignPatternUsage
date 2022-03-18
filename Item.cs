@@ -1,3 +1,5 @@
+using DesignPatternUsage.Abstractions;
+
 namespace DesignPatternUsage;
 
 /// <summary>

@@ -1,4 +1,4 @@
-namespace DesignPatternUsage;
+namespace DesignPatternUsage.Abstractions;
 
 /// <summary>
 /// Contract for discount rule.

@@ -1,4 +1,6 @@
-﻿namespace DesignPatternUsage;
+﻿using DesignPatternUsage.Abstractions;
+
+namespace DesignPatternUsage;
 
 /// <summary>
 /// Class resposible for calculating price of items

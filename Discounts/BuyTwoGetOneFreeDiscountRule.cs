@@ -1,4 +1,6 @@
-namespace DesignPatternUsage;
+using DesignPatternUsage.Abstractions;
+
+namespace DesignPatternUsage.Discounts;
 
 public class BuyTwoGetOneFreeDiscountRule : IDiscountRule
 {
@@ -25,7 +27,7 @@ public class BuyTwoGetOneFreeDiscountRule : IDiscountRule
 
             if (modValue == 0)
             {
-                var doubleQuantityCount =  currentItem.Quantity / 2;
+                var doubleQuantityCount = currentItem.Quantity / 2;
 
                 currentItem.Quantity += doubleQuantityCount;
             }

@@ -1,4 +1,5 @@
 ﻿using DesignPatternUsage;
+using DesignPatternUsage.Discounts;
 
 var cartItems = new List<Item>()
 {
