@@ -1,18 +1,18 @@
-﻿PriceCalculator calculator = new();
-
-var item1 = new Item("Product 1", 200, 2);
-var item2 = new Item("Product 2", 300);
-var item3 = new Item("Product 3", 500, 3);
-
-item1.DiscountRules.Add(new BuyTwoGetOneFreeDiscountRule());
+﻿using DesignPatternUsage;
 
 var cartItems = new List<Item>()
 {
-    item1,
-    item2,
-    item3
+    new Item("Product 1", 200, 3),
+    new Item("Product 2", 300),
+    new Item("Product 3", 500, 3)
 };
 
+// Add discount to items
+cartItems[0].Discounts.Add(new BuyTwoGetOneFreeDiscountRule());
+
+PriceCalculator calculator = new();
 var total = calculator.CalculatePrice(cartItems);
 
-Console.WriteLine(total);
+Console.WriteLine("Total Amount : " + total);
+
+Console.ReadLine();

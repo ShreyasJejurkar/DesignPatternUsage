@@ -1,20 +1,14 @@
+namespace DesignPatternUsage;
+
+/// <summary>
+/// Abstraction for price calculator.
+/// </summary>
 public interface IPriceCalculator
 {
+    /// <summary>
+    /// Returns price for purchased items
+    /// </summary>
+    /// <param name="purchasedItems"></param>
+    /// <returns>Price for checkout</returns>
     decimal CalculatePrice(List<Item> purchasedItems);
-}
-
-
-public class PriceCalculator : IPriceCalculator
-{
-    public decimal CalculatePrice(List<Item> purchasedItems)
-    {
-        var totalAmount = 0m;
-
-        foreach(var item in purchasedItems) 
-        {
-            totalAmount += item.GetFinalPriceAfterDiscount(purchasedItems);
-        }
-
-        return totalAmount;
-    }
 }
