@@ -10,6 +10,7 @@ var cartItems = new List<Item>()
 
 // Add discount to items
 cartItems[0].Discounts.Add(new BuyTwoGetOneFreeDiscountRule());
+cartItems[1].Discounts.Add(new FakeDiscount());
 
 PriceCalculator calculator = new();
 var total = calculator.CalculatePrice(cartItems);

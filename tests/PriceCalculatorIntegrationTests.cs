@@ -32,6 +32,7 @@ public class PriceCalculatorIntegrationTests
         };
 
         cartItems[0].Discounts.Add(new BuyTwoGetOneFreeDiscountRule());
+        cartItems[2].Discounts.Add(new FakeDiscount());
 
         PriceCalculator priceCalculator = new();
         _ = priceCalculator.CalculatePrice(cartItems);
