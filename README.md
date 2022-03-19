@@ -9,6 +9,10 @@ Specifically, a “buy two, get one free” deal for certain items or combinatio
 
 For example, if a “buy two, get one free” promotion is enabled for apples, when buying 3 apples and 3 oranges, payment for 2 apples and 3 oranges would be required
 
+The solution should be extensible. Part of the solution 2 types of bonuses should be implemented (i.e. no bonus and “buy two, get one free”), however, the implementation design should make it possible to add new types of bonuses easily. For this purpose, software design patterns should be used, for example, Factory and Strategy.
+
+As result of the implementation API should be created. Interface of the API should have calculated method with list of items as an input and calculated total as an output. For example, decimal IPriceCalculator(IList<Litem>items)
+
 ## Approch 
 1. I created `IPriceCalculator` and `PriceCalculator` classes and created a method based on the API description provided in the problem. 
 2. Then I read about discounts in the problem statement, they say we should be able to create new discounts easily without changing much code. This indicates we should have common abstractions for discounts so then I created the `IDiscountRule` interface and added the `GetDiscountPrice` method. 
